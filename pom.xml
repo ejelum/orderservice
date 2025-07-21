@@ -48,6 +48,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- Explicitly define the main class for the Spring Boot application -->
+					<mainClass>com.javatechie.orderservice.OrderServiceApplication</mainClass>
+				</configuration>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
 			</plugin>
 		</plugins>
 		<finalName>order-service</finalName>
